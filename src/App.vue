@@ -1,6 +1,6 @@
 <template>
     <div id="app" :style="color">
-        <div class='container'>
+        <div class="container">
             <h1>Colorpicker</h1>
             <ColorPresets />
         </div>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ColorPresets from './components/ColorPresets'
+    import ColorPresets from './components/ColorPresets'
 
     export default {
         name: 'App',
@@ -17,7 +17,7 @@ import ColorPresets from './components/ColorPresets'
         },
         data() {
             return {
-                currentColor: '#2b2b2b',
+                currentColor: '#2B2C2D',
             }
         },
         computed: {
@@ -32,7 +32,7 @@ import ColorPresets from './components/ColorPresets'
 
 <style>
     #app {
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
         background-color: var(--color);
         width: 100vw;
@@ -46,12 +46,26 @@ import ColorPresets from './components/ColorPresets'
         text-align: center;
     }
     h1 {
+        font-size: 45px;
         text-overflow: ellipsis;
         margin: auto;
         padding-bottom: 1em;
+        text-shadow: 2px 2px black;
     }
     .container {
-        width: 55%;
+        width: 80%;
         margin: auto;
+    }
+    @media only screen and (min-width: 768px) {
+        .container {
+            width: 60%;
+            margin: auto;
+        }
+    }
+    @media only screen and (min-width: 1000px) {
+        .container {
+            width: 35%;
+            margin: auto;
+        }
     }
 </style>

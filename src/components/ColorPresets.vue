@@ -1,12 +1,10 @@
 <template>
     <div class="container">
-        <div class="wrapper">
-            <div class='colorButton' :style="{backgroundColor: 'blue'}"></div>
-            <div class='colorButton' :style="{backgroundColor: 'red'}"></div>
-            <div class='colorButton' :style="{backgroundColor: 'green'}"></div>
-            <div class='colorButton' :style="{backgroundColor: 'yellow'}"></div>
-            <div class='colorButton' :style="{backgroundColor: 'purple'}"></div>
-        </div>
+        <div class="colorButton" :style="{ backgroundColor: 'blue' }"></div>
+        <div class="colorButton" :style="{ backgroundColor: '#ff0000' }"></div>
+        <div class="colorButton" :style="{ backgroundColor: '#2ae815' }"></div>
+        <div class="colorButton" :style="{ backgroundColor: 'yellow' }"></div>
+        <div class="colorButton" :style="{ backgroundColor: 'fuchsia' }"></div>
     </div>
 </template>
 
@@ -19,24 +17,34 @@
 <style scoped>
     .container {
         border-radius: 10px;
+        display: grid;
         background-color: rgb(0, 0, 0, 0.6);
         width: auto;
         height: auto;
-    }
-    .wrapper {
-        display: grid;
         grid-template-columns: repeat(5, 1fr);
-        height: 75px;
+        height: 80px;
     }
     .colorButton {
-        width: 40%;
-        height: 70%;
+        width: 45px;
+        height: 45px;
         margin: auto;
         border-radius: 50%;
     }
     .colorButton:hover {
         border: 3px solid white;
         box-shadow: 0 0 10px #9ecaed;
-        transition: 0.5s;
+        transition: 0.25s;
+    }
+    @media only screen and (max-width: 375px) {
+        .container {
+            width: 60%;
+            margin: auto;
+        }
+        .colorButton {
+            width: 34px;
+            height: 35px;
+            margin: auto;
+            border-radius: 50%;
+        }
     }
 </style>
