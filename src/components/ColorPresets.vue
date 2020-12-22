@@ -1,10 +1,30 @@
 <template>
     <div class="container">
-        <div class="colorButton" :style="{ backgroundColor: 'blue' }"></div>
-        <div class="colorButton" :style="{ backgroundColor: '#ff0000' }"></div>
-        <div class="colorButton" :style="{ backgroundColor: '#2ae815' }"></div>
-        <div class="colorButton" :style="{ backgroundColor: 'yellow' }"></div>
-        <div class="colorButton" :style="{ backgroundColor: 'fuchsia' }"></div>
+        <div 
+            class="colorButton" 
+            :style="{ backgroundColor: 'blue' }" 
+            @click="$emit('color-change', 'blue')"
+        ></div>
+        <div
+            class="colorButton"
+            :style="{ backgroundColor: '#ff0000' }"
+            @click="$emit('color-change', '#ff0000')"
+        ></div>
+        <div
+            class="colorButton"
+            :style="{ backgroundColor: '#2ae815' }"
+            @click="$emit('color-change', '#2ae815')"
+        ></div>
+        <div 
+            class="colorButton" 
+            :style="{ backgroundColor: 'yellow' }" 
+            @click="$emit('color-change', 'yellow')"
+        ></div>
+        <div
+            class="colorButton"
+            :style="{ backgroundColor: 'fuchsia' }"
+            @click="$emit('color-change', 'fuchsia')"
+        ></div>
     </div>
 </template>
 

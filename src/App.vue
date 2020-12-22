@@ -1,8 +1,8 @@
 <template>
     <div id="app" :style="color">
         <div class="container">
-            <h1>Colorpicker</h1>
-            <ColorPresets />
+            <h1>Color Picker</h1>
+            <ColorPresets v-on:color-change="changeColor"/>
         </div>
     </div>
 </template>
@@ -14,6 +14,11 @@
         name: 'App',
         components: {
             ColorPresets,
+        },
+        methods: {
+            changeColor(color) {
+                this.currentColor = color
+            }
         },
         data() {
             return {
