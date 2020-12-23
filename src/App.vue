@@ -2,7 +2,7 @@
     <div id="app" :style="color">
         <div class="container">
             <h1>Color Picker</h1>
-            <ColorPresets v-on:color-change="changeColor"/>
+            <ColorPresets v-on:color-change="changeColor" />
         </div>
     </div>
 </template>
@@ -15,15 +15,15 @@
         components: {
             ColorPresets,
         },
-        methods: {
-            changeColor(color) {
-                this.currentColor = color
-            }
-        },
         data() {
             return {
                 currentColor: '#2B2C2D',
             }
+        },
+        methods: {
+            changeColor(color) {
+                this.currentColor = color
+            },
         },
         computed: {
             color() {
@@ -63,7 +63,7 @@
     }
     @media only screen and (min-width: 768px) {
         .container {
-            width: 60%;
+            width: 70%;
             margin: auto;
         }
     }
